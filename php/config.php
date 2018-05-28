@@ -9,7 +9,4 @@ define('DB_DATABASE', 'loja');
 
 
 
-
-
-
 ?>
