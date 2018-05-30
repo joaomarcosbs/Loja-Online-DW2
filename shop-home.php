@@ -34,7 +34,7 @@
               <a class="nav-link" href="login.php">Perfil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Carrinho</a>
+              <a class="nav-link" href="shop-cart.php">Carrinho</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -109,7 +109,7 @@
                 <a href="#"><img class="card-img-top" src="http://www.tecnoandroid.it/wp-content/uploads/2017/10/iphone-x-1-800x614-700x400.jpeg" alt="iPhone X"></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">iPhone X</a>
+                    <a href="shop-item.php">iPhone X</a>
                   </h4>
                   <h5>R$6.699,00</h5>
                   <p class="card-text">Apple iPhone X Prata 256GB Tela 5.8" iOS 11 4G Wi-Fi Câmera 12MP</p>
@@ -125,7 +125,7 @@
                 <a href="#"><img class="card-img-top" src="http://vtech-computer.com/image/cache/catalog/PC%20Hardware/Mainboard/172152255-700x400.jpeg" alt="Asus Strix H270F"></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">ASUS Strix H270F</a>
+                    <a href="shop-item.php">ASUS Strix H270F</a>
                   </h4>
                   <h5>R$499,00</h5>
                   <p class="card-text">Placa Mãe Gamer Asus, suporta 6/7ª Geração Intel</p>
@@ -141,7 +141,7 @@
                 <a href="#"><img class="card-img-top" src="http://www.appsmart.in.th/wp-content/uploads/2015/05/unnamed-222-700x400.jpg" alt="Galaxy Tab A"></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Galaxy Tab A</a>
+                    <a href="shop-item.php">Galaxy Tab A</a>
                   </h4>
                   <h5>R$1.299,00</h5>
                   <p class="card-text">Samsung Galaxy Tab A SM-P585M 16GB Wi-Fi 4G Tela 10.1" Android</p>

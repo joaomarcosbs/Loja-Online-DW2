@@ -34,7 +34,7 @@
               <a class="nav-link" href="login.php">Perfil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Carrinho</a>
+              <a class="nav-link" href="shop-cart.php">Carrinho</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

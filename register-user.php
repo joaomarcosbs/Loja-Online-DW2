@@ -16,8 +16,7 @@
 </head>
 <body>
   <!-- Navigation -->
-<<<<<<< HEAD
-   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 
       <div class="container">
         <a class="navbar-brand" href="shop-home.php" style="font-size: 1.5rem;">IF - Tech Shop</a>
@@ -30,7 +29,7 @@
               <a class="nav-link" href="login.php">Perfil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Carrinho</a>
+              <a class="nav-link" href="shop-cart.php">Carrinho</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -46,34 +45,10 @@
             <input class="form-control" type="text" placeholder="Pesquisar">
           </form>
         </div>
-=======
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-
-      <div class="container">
-        <a class="navbar-brand" href="#">IF - Tech Shop</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sobre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Perfil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Carrinho</a>
-            </li>
-          </ul>
-        </div>
-        <form class="form-inline" style="margin-left: 30px">
-          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-        </form>
->>>>>>> 79b4d81c0d8208c52ce8df93704534fafffceca1
       </div>
     </nav>
+
+    
 
     <div class="container">
       <div class="py-5 text-center">

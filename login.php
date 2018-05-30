@@ -17,9 +17,8 @@
 </head>
 <body>
 
-	<!-- Navigation -->
-<<<<<<< HEAD
-   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	 <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 
       <div class="container">
         <a class="navbar-brand" href="shop-home.php" style="font-size: 1.5rem;">IF - Tech Shop</a>
@@ -32,7 +31,7 @@
               <a class="nav-link" href="login.php">Perfil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Carrinho</a>
+              <a class="nav-link" href="shop-cart.php">Carrinho</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -48,41 +47,17 @@
             <input class="form-control" type="text" placeholder="Pesquisar">
           </form>
         </div>
-=======
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-
-      <div class="container">
-        <a class="navbar-brand" href="#">IF - Tech Shop</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sobre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Perfil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Carrinho</a>
-            </li>
-          </ul>
-        </div>
-        <form class="form-inline" style="margin-left: 30px">
-          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-        </form>
->>>>>>> 79b4d81c0d8208c52ce8df93704534fafffceca1
       </div>
     </nav>
+
+   
 
 
     <div class="container">
     	
     	<form class="form-signin" style="text-align: center;">
       		
-<<<<<<< HEAD
+
       		<h1 class="h3 mb-3 font-weight-normal">Entrar</h1>
       		<label for="email" class="sr-only">E-mail</label>
       		<input type="email" id="email" class="form-control" placeholder="E-mail" required autofocus>
@@ -100,20 +75,8 @@
             <a href="register-user.php">Clique Aqui</a>
           </label>
 
-=======
-      		<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      		<label for="inputEmail" class="sr-only">Email address</label>
-      		<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      		<label for="inputPassword" class="sr-only">Password</label>
-      		<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      		<div class="checkbox mb-3">
-        		<label>
-          			<input type="checkbox" value="remember-me"> Remember me
-        		</label>
-      		</div>
-      		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      		<p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
->>>>>>> 79b4d81c0d8208c52ce8df93704534fafffceca1
+
+      	
    		</form>
 
     </div>
