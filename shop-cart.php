@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Checkout example for Bootstrap</title>
+    <title>IF- Tech Shop</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -111,7 +111,7 @@
 
             <div class="mb-3">
               <label for="email">E-mail</label>
-              <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com" required>
+              <input type="email" class="form-control" id="email" placeholder="relampago-marquinhos@catiau.com" required>
               <div class="invalid-feedback">
                 Por favor insira um endereço de email válido.
               </div>
@@ -161,80 +161,68 @@
               </div>
             </div>
             <hr class="mb-4">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="same-address">
-              <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="save-info">
-              <label class="custom-control-label" for="save-info">Save this information for next time</label>
-            </div>
-            <hr class="mb-4">
 
-            <h4 class="mb-3">Payment</h4>
+            <h4 class="mb-3">Dados de pagamento</h4>
 
             <div class="d-block my-3">
               <div class="custom-control custom-radio">
                 <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                <label class="custom-control-label" for="credit">Credit card</label>
+                <label class="custom-control-label" for="credit">Cartão de Crédito</label>
               </div>
               <div class="custom-control custom-radio">
                 <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                <label class="custom-control-label" for="debit">Debit card</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                <label class="custom-control-label" for="paypal">PayPal</label>
+                <label class="custom-control-label" for="debit">Cartão de Débito</label>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6 mb-3">
-                <label for="cc-name">Name on card</label>
-                <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                <small class="text-muted">Full name as displayed on card</small>
+                <label for="cc-name">Nome no cartão</label>
+                <input type="text" class="form-control" id="cc-name" placeholder="Um Dois Três da Silva Quatro" required>
+                <small class="text-muted">Nome como está no cartão</small>
                 <div class="invalid-feedback">
-                  Name on card is required
+                 Por favor insira o nome
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <label for="cc-number">Credit card number</label>
-                <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                <label for="cc-number">Número do cartão</label>
+                <input type="text" class="form-control" id="cc-number" placeholder="0000 0000 0000 0000" required>
                 <div class="invalid-feedback">
-                  Credit card number is required
+                  Por favor insira o número do cartão
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-3 mb-3">
-                <label for="cc-expiration">Expiration</label>
-                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                <label for="cc-expiration">Data de validade</label>
+                <input type="text" class="form-control" id="cc-expiration" placeholder="mm/aa" required>
                 <div class="invalid-feedback">
-                  Expiration date required
+                  Por favor insira a data de validade do cartão
                 </div>
               </div>
-              <div class="col-md-3 mb-3">
-                <label for="cc-cvv">CVV</label>
-                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+              <div class="col-md-4 mb-3">
+                <label for="cc-cvv">Código de segurança</label>
+                <input type="text" class="form-control" id="cc-cvv" placeholder="000" required>
                 <div class="invalid-feedback">
-                  Security code required
+                  Por favor insira o código de segurança
                 </div>
               </div>
             </div>
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" style="margin-bottom: 10%">Finalizar Compra</button>
           </form>
         </div>
       </div>
 
-      <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2017-2018 Company Name</p>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Privacy</a></li>
-          <li class="list-inline-item"><a href="#">Terms</a></li>
-          <li class="list-inline-item"><a href="#">Support</a></li>
-        </ul>
-      </footer>
+     
     </div>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; IF - Tech Shop  2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
