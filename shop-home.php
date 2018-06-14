@@ -1,3 +1,12 @@
+<?php
+  include('php/config.php');
+  include('php/functions.php');
+  session_start();
+
+  
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,10 +55,18 @@
               </div>
             </li>
           </ul>
+          <?php 
+            if(verificaLogin()){ 
+              echo '<p style="color: white">Olá, ' . $_SESSION['usuario_nome'] . '&nbsp;&nbsp;</p><br>';
+              echo '<a href="php/logout.php">Sair</a>';
+             } 
+           ?>
+        
           <form class="form-inline my-2 my-md-0">
             <input class="form-control" type="text" placeholder="Pesquisar">
           </form>
         </div>
+     
       </div>
     </nav>
 

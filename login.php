@@ -55,14 +55,14 @@
 
     <div class="container">
     	
-    	<form class="form-signin" style="text-align: center;">
+    	<form action="php/formLogin.php" method="POST" class="form-signin" style="text-align: center;">
       		
 
       		<h1 class="h3 mb-3 font-weight-normal">Entrar</h1>
       		<label for="email" class="sr-only">E-mail</label>
-      		<input type="email" id="email" class="form-control" placeholder="E-mail" required autofocus>
+      		<input type="email" id="email" name="email" class="form-control" placeholder="E-mail" required autofocus>
       		<label for="inputPassword" class="sr-only">Senha</label>
-      		<input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+      		<input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Senha" required>
       		<div class="checkbox mb-3">
         		<label>
           			<input type="checkbox" value="remember-me"> Lembre-se de mim

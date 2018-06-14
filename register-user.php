@@ -1,3 +1,12 @@
+<?php
+
+
+
+
+
+
+?> 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Registrar suário</title>
+    <title>Registrar Usuário</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -59,18 +68,18 @@
       <div class="container" style="margin-bottom: 10% ">
         <div class="col-md-8 order-md-1">
               
-              <form class="needs-validation" novalidate>
+              <form action="php/register.php" method="POST" class="needs-validation" novalidate>
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label for="nome">Nome</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Seu nome aqui" value="" required>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome aqui" value="" required>
                     <div class="invalid-feedback">
                       Campo obrigatório.
                     </div>
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="sobrenome">Sobrenome</label>
-                    <input type="text" class="form-control" id="sobrenome" placeholder="Seu sobrenome aqui" value="" required>
+                    <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Seu sobrenome aqui" value="" required>
                     <div class="invalid-feedback">
                       Campo obrigatório.
                     </div>
@@ -80,7 +89,7 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label for="telefone">Telefone</label>
-                    <input type="text" class="form-control" id="telefone" placeholder="12 123456789">
+                    <input type="text" class="form-control" id="telefone" name="telefone" placeholder="12 123456789">
                     <div class="invalid-feedback">
                       Campo obrigatório.
                     </div>
@@ -88,7 +97,7 @@
 
                   <div class="col-md-6 mb-3">
                     <label for="cpf">CPF</label>
-                    <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+                    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required>
                     <div class="invalid-feedback">
                       Please enter your shipping address.
                     </div>
@@ -102,7 +111,7 @@
 
                   <div class="col-md-6 mb-3">
                     <label for="email">E-mail</label>
-                    <input type="email" class="form-control" id="email" placeholder="seu-email@exemplo.com">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="seu-email@exemplo.com">
                     <div class="invalid-feedback">
                       Informe um edereço de E-mail válido.
                     </div>
@@ -115,7 +124,7 @@
                   
                   <div class="col-md-6 mb-3">
                     <label for="senha">Senha</label>
-                    <input type="password" class="form-control" id="senha" placeholder="" required>
+                    <input type="password" class="form-control" id="senha" name="senha" placeholder="" required>
                     <div class="invalid-feedback">
                       Campo obrigatório.
                     </div>
@@ -123,7 +132,7 @@
 
                   <div class="col-md-6 mb-3">
                     <label for="verifica-senha">Repita a senha</label>
-                    <input type="password" class="form-control" id="verifica-senha" placeholder="" required>
+                    <input type="password" class="form-control" id="verifica-senha" name="verifica-senha" placeholder="" required>
                     <div class="invalid-feedback">
                       Campo obrigatório.
                     </div>
@@ -133,7 +142,7 @@
 
                 <hr class="mb-4">
 
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Cadastrar</button>
+                <input class="btn btn-primary btn-lg btn-block" type="submit" name="btn_submit" value="Cadastrar">
 
               </form>
 
