@@ -1,3 +1,18 @@
+<?php
+include('php/config.php');
+include('php/functions.php');
+session_start();
+
+$con = connectBD();
+mysqli_set_charset($con,"utf8");
+$sql = "select * from produtos where produto_id = ". $_GET['id'];
+$rs = mysqli_query($con, $sql);
+$data = mysqli_fetch_assoc($rs);
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,11 +91,11 @@
         <div class="col-lg-9">
 
           <div class="card mt-4">
-            <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+            <img class="card-img-top img-fluid" src="img/<?= $data['produto_img'] ?>" alt="">
             <div class="card-body">
-              <h3 class="card-title">Product Name</h3>
-              <h4>$24.99</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+              <h3 class="card-title"><?= $data['produto_nome'] ?></h3>
+              <h4><?= 'R$ '.$data['produto_valor']/100 ?></h4>
+              <p class="card-text"><?= $data['produto_descricao'] ?></p>
               <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
               4.0 stars
               <div class="container">
@@ -95,9 +110,7 @@
               Ficha Técnica
             </div>
             <div class="card-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+              <?= $data['produto_descricao'] ?>
               <hr>
               <a href="#" class="btn btn-primary">Comprar</a>
             </div>

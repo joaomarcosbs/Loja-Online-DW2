@@ -1,3 +1,27 @@
+<?php
+include('php/config.php');
+include('php/functions.php');
+session_start();
+
+// email: naorespondavenda@gmail.com
+// senha: naoresponda
+
+if(isset($_POST['btn_enviar'])){
+  $pNome     = $_POST['nome'];   
+  $pTelefone = $_POST['telefone'];
+  $pEmail    = $_POST['email'];
+  $pMensagem = $_POST['mensagem'];
+
+  // envia mensagem
+
+  
+  unset($_POST['btn_enviar']);
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -103,35 +127,35 @@
       <div class="row">
         <div class="col-lg-8 mb-4">
           <h3>Fale Conosco!</h3>
-          <form name="sentMessage" id="contactForm" novalidate>
+          <form action="contact.php" method="post" name="sentMessage" id="contactForm" novalidate>
             <div class="control-group form-group">
               <div class="controls">
                 <label>Nome Completo:</label>
-                <input type="text" class="form-control" id="nome" required data-validation-required-message="Preencha este campo.">
+                <input type="text" class="form-control" id="nome" name="nome" required data-validation-required-message="Preencha este campo.">
                 <p class="help-block"></p>
               </div>
             </div>
             <div class="control-group form-group">
               <div class="controls">
                 <label>Telefone:</label>
-                <input type="tel" class="form-control" id="telefone" required data-validation-required-message="Preencha este campo.">
+                <input type="tel" class="form-control" id="telefone" name="telefone" required data-validation-required-message="Preencha este campo.">
               </div>
             </div>
             <div class="control-group form-group">
               <div class="controls">
                 <label>E-mail:</label>
-                <input type="email" class="form-control" id="email" required data-validation-required-message="Preencha este campo.">
+                <input type="email" class="form-control" id="email" name="email" required data-validation-required-message="Preencha este campo.">
               </div>
             </div>
             <div class="control-group form-group">
               <div class="controls">
                 <label>Sua Mensagem:</label>
-                <textarea rows="10" cols="100" class="form-control" id="mensagem" required data-validation-required-message="Preencha este campo." maxlength="999" style="resize:none"></textarea>
+                <textarea rows="10" cols="100" class="form-control" id="mensagem" name="mensagem" required data-validation-required-message="Preencha este campo." maxlength="999" style="resize:none"></textarea>
               </div>
             </div>
             <div id="success"></div>
             <!-- For success/fail messages -->
-            <button type="submit" class="btn btn-primary" id="btn_enviar">Enviar Mensagem</button>
+            <input type="submit" class="btn btn-primary" name="btn_enviar" value="Enviar Mensagem">
           </form>
         </div>
 
@@ -156,7 +180,7 @@
     <!-- Contact form JavaScript -->
     <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
     <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <!-- <script src="js/contact_me.js"></script> -->
 
   </body>
 
