@@ -62,13 +62,9 @@
       		<label for="email" class="sr-only">E-mail</label>
       		<input type="email" id="email" name="email" class="form-control" placeholder="E-mail" required autofocus>
       		<label for="inputPassword" class="sr-only">Senha</label>
-      		<input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Senha" required>
-      		<div class="checkbox mb-3">
-        		<label>
-          			<input type="checkbox" value="remember-me"> Lembre-se de mim
-        		</label>
-      		</div>
-      		<button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+      		<input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Senha" required style="margin-bottom: 8%">
+      		
+      		<button class="btn btn-lg btn-primary btn-block" type="submit" >Log in</button>
 
           <label style="margin-top: 4%">
             Ainda não possui cadastro? 
@@ -80,15 +76,6 @@
    		</form>
 
     </div>
-
-
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; IF - Tech Shop  2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
