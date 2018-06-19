@@ -45,7 +45,12 @@ $rs = mysqli_query($con, $sql);
         <div class="collapse navbar-collapse" id="navbarsExample04">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="login.php">Entrar</a>
+              <?php 
+            if(!verificaLogin()){ 
+              echo '<a class="nav-link" href="login.php">Entrar</a>';
+             }
+            ?>
+              
             </li>
             <li class="nav-item">
               <a class="nav-link" href="shop-cart.php">Carrinho</a>
@@ -59,14 +64,21 @@ $rs = mysqli_query($con, $sql);
                 <a class="dropdown-item" href="about.php">Sobre Nós</a>
               </div>
             </li>
+            
           </ul>
-          <?php 
+
+           <ul class="navbar-nav mr-auto">
+
+            <?php 
             if(verificaLogin()){ 
-              echo '<p style="color: white">Olá, ' . $_SESSION['usuario_nome'] . '&nbsp;&nbsp;</p><br>';
-              echo '<a href="php/logout.php">Sair</a>';
-             } 
-           ?>
-        
+              echo '<li class="nav-item"  ><a class="nav-link" style="color: white">Olá, ' . $_SESSION['usuario_nome'] . '</a></li>';
+             }
+            ?>
+
+           </ul>
+
+            
+                 
           <form class="form-inline my-2 my-md-0">
             <input class="form-control" type="text" placeholder="Pesquisar">
           </form>
