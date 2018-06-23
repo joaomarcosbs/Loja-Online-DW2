@@ -1,3 +1,9 @@
+<?php
+include('php/config.php');
+include('php/functions.php');
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +26,7 @@
 
   <body>
 
-    <!-- Navigation -->
+      <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 
       <div class="container">
@@ -31,10 +37,15 @@
         <div class="collapse navbar-collapse" id="navbarsExample04">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="login.php">Perfil</a>
+              <?php 
+            if(!verificaLogin()){ 
+              echo '<a class="nav-link" href="login.php">Entrar</a>';
+             }
+            ?>
+              
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Carrinho</a>
+              <a class="nav-link" href="shop-cart.php">Carrinho</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,11 +56,25 @@
                 <a class="dropdown-item" href="about.php">Sobre Nós</a>
               </div>
             </li>
+            
           </ul>
+
+           <ul class="navbar-nav mr-auto">
+
+            <?php 
+            if(verificaLogin()){ 
+              echo '<li class="nav-item"  ><a class="nav-link" style="color: white">Olá, ' . $_SESSION['usuario_nome'] . '</a></li>';
+             }
+            ?>
+
+           </ul>
+
+
           <form class="form-inline my-2 my-md-0">
             <input class="form-control" type="text" placeholder="Pesquisar">
           </form>
         </div>
+     
       </div>
     </nav>
 
@@ -86,14 +111,14 @@
       <div class="row">
         <div class="col-lg-6 mb-4">
           <div class="card h-100 text-center">
-            <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+            <img class="card-img-top" src="img/guilherme.jpg" alt="">
             <div class="card-body">
               <h4 class="card-title">Guilherme</h4>
               <h6 class="card-subtitle mb-2 text-muted">Desenvolvedor</h6>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+             <!--  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p> -->
             </div>
             <div class="card-footer">
-              <a href="#">name@example.com</a>
+              <a href="#">osilva.guilherme@gmail.com</a>
             </div>
           </div>
         </div>

@@ -5,11 +5,15 @@ session_start();
 
 $con = connectBD();
 mysqli_set_charset($con,"utf8");
-$sql = "select * from produtos order by produto_id limit 3";
-$rs = mysqli_query($con, $sql);
 
-
-
+if(isset($_GET['search'])){
+	if(strpos($_GET['search'],'%') === false){
+		$sql = "select * from produtos where produto_nome like '%" . $_GET['search'] . "%'";
+		$rs = mysqli_query($con, $sql);
+	}else{
+		header('Location: index.php');
+	}
+}
 
 ?>
 <!DOCTYPE html>
@@ -68,16 +72,12 @@ $rs = mysqli_query($con, $sql);
           </ul>
 
            <ul class="navbar-nav mr-auto">
-
             <?php 
             if(verificaLogin()){ 
               echo '<li class="nav-item"  ><a class="nav-link" style="color: white">Olá, ' . $_SESSION['usuario_nome'] . '</a></li>';
              }
             ?>
-
            </ul>
-
-
           <form action="search.php" method="get" class="form-inline my-2 my-md-0">
             <input class="form-control" type="text" name="search" placeholder="Pesquisar">
           </form>
@@ -107,32 +107,7 @@ $rs = mysqli_query($con, $sql);
         <!-- /.col-lg-3 -->
 
         <div class="col-lg-9">
-
           <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-              <div class="carousel-item active">
-                <img class="d-block img-fluid" src="img/Zagg-InvisibleSheild-900x350.png" alt="First slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block img-fluid" src="img/technology-photo-900x350.jpg" alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block img-fluid" src="img/bigstock_Computer_Keyboard_With_Human_H_3695191-900x350.jpg" alt="Third slide">
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
           </div>
 
           <div class="row">

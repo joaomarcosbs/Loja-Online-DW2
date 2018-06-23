@@ -1,14 +1,15 @@
 <?php
 // Guilherme Silva ©2018
-error_reporting(E_ALL);
+error_reporting(0);
 
 session_start();
 
 define('DB_USER', 'root');
-define('DB_PASSWORD', '123');
+define('DB_PASSWORD', '');
 define('DB_HOST', 'localhost');
 define('DB_DATABASE', 'loja');
-
+define('LOJA_EMAIL', 'lojaifrs@gmail.com');
+define('LOJA_SENHA', 'lojaifrs123');
 
 
 ?>

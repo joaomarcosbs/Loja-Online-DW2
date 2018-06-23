@@ -12,12 +12,19 @@ if(isset($_POST['btn_enviar'])){
   $pEmail    = $_POST['email'];
   $pMensagem = $_POST['mensagem'];
 
-  // envia mensagem
+  $from = "From: " . $pEmail;
+  $subject = "Contato loja IFRS - ".$pNome;
+  $msg = "Nome: $pNome \r\n\r\n".
+         "Telefone: $pTelefone\r\n\r\n".
+         "E-mail: $pEmail\r\n\r\n".
+         "Mensagem: $pMensagem \r\n\r\n";
 
+  mail(LOJA_EMAIL, $subject, $msg, $from);
   
+  scriptThat('alert("E-mail enviado com sucesso!")');
+  scriptThat('window.location="index.php"');
   unset($_POST['btn_enviar']);
 }
-
 
 ?>
 
@@ -44,7 +51,7 @@ if(isset($_POST['btn_enviar'])){
 
   <body>
 
-    <!-- Navigation -->
+   <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 
       <div class="container">
@@ -55,7 +62,12 @@ if(isset($_POST['btn_enviar'])){
         <div class="collapse navbar-collapse" id="navbarsExample04">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="login.php">Perfil</a>
+              <?php 
+            if(!verificaLogin()){ 
+              echo '<a class="nav-link" href="login.php">Entrar</a>';
+             }
+            ?>
+              
             </li>
             <li class="nav-item">
               <a class="nav-link" href="shop-cart.php">Carrinho</a>
@@ -69,11 +81,25 @@ if(isset($_POST['btn_enviar'])){
                 <a class="dropdown-item" href="about.php">Sobre Nós</a>
               </div>
             </li>
+            
           </ul>
+
+           <ul class="navbar-nav mr-auto">
+
+            <?php 
+            if(verificaLogin()){ 
+              echo '<li class="nav-item"  ><a class="nav-link" style="color: white">Olá, ' . $_SESSION['usuario_nome'] . '</a></li>';
+             }
+            ?>
+
+           </ul>
+
+
           <form class="form-inline my-2 my-md-0">
             <input class="form-control" type="text" placeholder="Pesquisar">
           </form>
         </div>
+     
       </div>
     </nav>
 
