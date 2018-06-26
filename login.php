@@ -15,20 +15,59 @@
     <!-- Custom styles for this template -->
     <link href="css/signin.css" rel="stylesheet">
 </head>
-<body>
+<style type="text/css">
+  
+  @media screen and (min-width: 992px){
 
-	 <!-- Navigation -->
+      #nome{
+        margin-left: 30%;
+      }
+  }
+
+   @media screen and (max-width: 991px){
+
+     #titulo{
+        margin-left: -10px;
+     }
+
+     #pesquisa{
+        margin-right: -10px; 
+
+      }
+      
+  }
+
+  @media screen and (max-width: 768px){
+
+     #titulo{
+        margin-left: 0px;
+     }
+
+     #nome{
+        margin-left: 0%;
+      }
+      
+  }
+
+
+</style>
+  <body>
+
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 
       <div class="container">
-        <a class="navbar-brand" href="shop-home.php" style="font-size: 1.5rem;">IF - Tech Shop</a>
+        <a class="navbar-brand" id="titulo" href="shop-home.php" style="font-size: 1.5rem;">IF - Tech Shop</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
         <div class="collapse navbar-collapse" id="navbarsExample04">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="login.php">Perfil</a>
+              
+              <a class="nav-link" href="login.php">Entrar</a>
+             
+              
             </li>
             <li class="nav-item">
               <a class="nav-link" href="shop-cart.php">Carrinho</a>
@@ -42,14 +81,19 @@
                 <a class="dropdown-item" href="about.php">Sobre Nós</a>
               </div>
             </li>
+            
           </ul>
-          <form class="form-inline my-2 my-md-0">
-            <input class="form-control" type="text" placeholder="Pesquisar">
+
+
+           
+
+          <form action="search.php" method="get" class="form-inline my-2 my-md-0">
+            <input class="form-control" id="pesquisa" type="text" name="search" placeholder="Pesquisar">
           </form>
         </div>
+     
       </div>
     </nav>
-
    
 
 

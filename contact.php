@@ -49,13 +49,49 @@ if(isset($_POST['btn_enviar'])){
 
   </head>
 
+  <style type="text/css">
+  
+  @media screen and (min-width: 992px){
+
+      #nomes{
+        margin-left: 30%;
+      }
+  }
+
+   @media screen and (max-width: 991px){
+
+     #titulo{
+        margin-left: -10px;
+     }
+
+     #pesquisa{
+        margin-right: -10px; 
+
+      }
+      
+  }
+
+  @media screen and (max-width: 768px){
+
+     #titulo{
+        margin-left: 0px;
+     }
+
+     #nomes{
+        margin-left: 0%;
+      }
+      
+  }
+
+
+</style>
   <body>
 
-   <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 
       <div class="container">
-        <a class="navbar-brand" href="shop-home.php" style="font-size: 1.5rem;">IF - Tech Shop</a>
+        <a class="navbar-brand" id="titulo" href="shop-home.php" style="font-size: 1.5rem;">IF - Tech Shop</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -84,7 +120,7 @@ if(isset($_POST['btn_enviar'])){
             
           </ul>
 
-           <ul class="navbar-nav mr-auto">
+           <ul class="navbar-nav mr-auto" id="nomes">
 
             <?php 
             if(verificaLogin()){ 
@@ -94,9 +130,17 @@ if(isset($_POST['btn_enviar'])){
 
            </ul>
 
+           <ul class="navbar-nav mr-auto">
+             <?php 
+             if(verificaLogin()){ 
+               echo '<li class="nav-item"> <a class="nav-link" href="php/logout.php" style="color: white">Sair</a>';
+              } 
+            ?>
+           </ul>
 
-          <form class="form-inline my-2 my-md-0">
-            <input class="form-control" type="text" placeholder="Pesquisar">
+
+          <form action="search.php" method="get" class="form-inline my-2 my-md-0">
+            <input class="form-control" id="pesquisa" type="text" name="search" placeholder="Pesquisar">
           </form>
         </div>
      

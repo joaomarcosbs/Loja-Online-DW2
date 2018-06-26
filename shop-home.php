@@ -32,13 +32,53 @@ $rs = mysqli_query($con, $sql);
 
   </head>
 
+<style type="text/css">
+  
+  @media screen and (min-width: 992px){
+
+      #nome{
+        margin-left: 30%;
+      }
+  }
+
+   @media screen and (max-width: 991px){
+
+     #titulo{
+        margin-left: -10px;
+     }
+
+     #pesquisa{
+        margin-right: -10px; 
+
+      }
+      
+  }
+
+  @media screen and (max-width: 768px){
+
+     #titulo{
+        margin-left: 0px;
+     }
+
+     #nome{
+        margin-left: 0%;
+      }
+      
+  }
+
+  #imagem{
+     max-width:300px;
+    width: 100%;
+  }
+
+</style>
   <body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 
       <div class="container">
-        <a class="navbar-brand" href="shop-home.php" style="font-size: 1.5rem;">IF - Tech Shop</a>
+        <a class="navbar-brand" id="titulo" href="shop-home.php" style="font-size: 1.5rem;">IF - Tech Shop</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -67,7 +107,7 @@ $rs = mysqli_query($con, $sql);
             
           </ul>
 
-           <ul class="navbar-nav mr-auto">
+           <ul class="navbar-nav mr-auto" id="nome">
 
             <?php 
             if(verificaLogin()){ 
@@ -77,9 +117,17 @@ $rs = mysqli_query($con, $sql);
 
            </ul>
 
+           <ul class="navbar-nav mr-auto">
+             <?php 
+             if(verificaLogin()){ 
+               echo '<li class="nav-item"> <a class="nav-link" href="php/logout.php" style="color: white">Sair</a>';
+              } 
+            ?>
+           </ul>
+
 
           <form action="search.php" method="get" class="form-inline my-2 my-md-0">
-            <input class="form-control" type="text" name="search" placeholder="Pesquisar">
+            <input class="form-control" id="pesquisa" type="text" name="search" placeholder="Pesquisar">
           </form>
         </div>
      
@@ -140,7 +188,7 @@ $rs = mysqli_query($con, $sql);
             <?php while($data = mysqli_fetch_assoc($rs)){ ?>
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="img/<?= $data['produto_img'] ?>" alt="iPhone X"></a>
+                <a href="#"><img class="card-img-top" id="imagem" src="img/<?= $data['produto_img'] ?>" alt="iPhone X"></a>
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="shop-item.php?id=<?= $data['produto_id'] ?>"><?= $data['produto_nome'] ?></a>
